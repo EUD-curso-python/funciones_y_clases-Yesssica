@@ -87,7 +87,7 @@ def saltando_rocas():
     '''
     pass
 
-def pares_medias():
+def pares_medias(li):
     '''Contar pares de medias
 
     Esta función debe recibir como argumento una lista de enteros. Cada elemento
@@ -97,7 +97,32 @@ def pares_medias():
     uno de los colores que se encuentren en la lista, y los valores son la 
     cantidad de pares que se han encontrado para cada color.
     '''
+    dic = {}
+    nopar = []
+    print('colores')
+    for el in li:
+      dic.setdefault(el,0)
+      print(dic)
+    print('medias')
+    for el in li:
+      dic[el] += 1
+      print(dic)
+    print('pares')
+    for el2 in dic:
+       dic[el2] = dic[el2]//2
+    print(dic)
+    for el2 in dic:
+      if dic[el2] == 0:
+        nopar.append(el2)
+    print('no pares')
+    print(nopar)
+    for el3 in nopar:
+      del dic[el3]
+    return dic
     pass
+test = [1,2,3,4,1,3,6,2,3,3,6]
+print(test)
+print(pares_medias(test))
 
 # Crear una clase llamada `ListaComa` que reciba en su constructor un iterable
 # con el valor inicial para una lista que se guardará en un atributo llamado 
