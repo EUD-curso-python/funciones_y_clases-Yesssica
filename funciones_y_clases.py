@@ -45,7 +45,7 @@ def anio_bisiesto(anio):
       return False
     pass
 
-def contar_valles(lista):
+def contar_valles(args):
     r'''Contar el número de valles
 
     Esta función debe recibir como argumento una lista de -1's, 0's y 1's, y lo 
@@ -63,13 +63,23 @@ def contar_valles(lista):
     representados en la lista, que para el ejemplo que se acaba de mostrar es
     de 3 valles.
     '''
-    cont = 0
-    for i in lista:
-      if i == 0:
-        cont += 1
-    print(cont)
-    return cont
-    pass
+    #cont = 0
+    #for i in lista:
+    #  if i == 0:
+    #    cont += 1
+    #print(cont)
+    #return cont
+    #pass
+
+    con = 0
+    for i in args:
+      for e in args+1:
+        if i == 1 and e == -1:
+          con +=1
+        else:
+          con
+    print(con)
+print(contar_valles([-1,1,0,1,1,-1,0,0,1,-1,1,1,-1,-1]))
 
 def saltando_rocas():
     '''Mínimo número de saltos en las rocas
