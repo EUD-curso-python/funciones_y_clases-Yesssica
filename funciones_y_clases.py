@@ -1,13 +1,19 @@
 global1 = 34
 
-def cambiar_global():
+def cambiar_global(a):
     '''Cambiar una variable global
 
     Esta función debe asignarle a la variable global `global1` el valor que se
     le pasa como único argumento posicional.
     '''
-    pass
+    #pass
+    global global1
+    global1 = a
+    print(global1)
 
+print(global1)
+cambiar_global(12)   
+print(global1) 
 
 def anio_bisiesto():
     '''Responder si el entero pasado como argumento es un año bisiesto
